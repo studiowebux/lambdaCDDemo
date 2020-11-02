@@ -2,7 +2,7 @@ version: 0.1
 phases:
   install:
     commands:
-      - aws cloudformation package --template samTemplate.yaml --s3-bucket webux-lambda-pipeline --output json > outputSamTemplate.json
+      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket webux-lambda-pipeline --output-template-file outputSamTemplate.json
 artifacts:
   type: zip
   files:
